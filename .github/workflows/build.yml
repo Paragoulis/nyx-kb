@@ -25,7 +25,7 @@ jobs:
       fail-fast: false
       matrix:
         board:
-          - nice_nano
+#          - nice_nano
           - nice_nano_v2
         shield:
           - nyx_left
