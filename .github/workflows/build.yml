@@ -30,6 +30,7 @@ jobs:
         shield:
           - nyx_left
           - nyx_right
+          - settings_reset
     steps:
       - name: Prepare variables
         id: variables
