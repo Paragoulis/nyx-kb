@@ -156,5 +156,10 @@
             key-positions = <62 63>;
             bindings = <&mo 5>;
         };
+
+        sleep_left {
+            bindings = <&kp C_SLEEP>;
+            key-positions = <62 63 7>;
+        };
     };
 };
