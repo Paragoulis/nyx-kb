@@ -117,11 +117,11 @@
 
         sym_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&trans        &trans    &trans       &trans         &trans                &trans                 &trans    &trans  &trans  &trans     &trans     &trans    &trans    &trans
+&kp QUESTION  &kp EXCL  &kp DOLLAR   &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans    &trans  &trans  &trans     &trans     &trans    &trans    &trans
+&kp COLON     &kp AT    &kp PERCENT  &kp ASTERISK   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans    &trans  &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
+&kp TILDE     &kp HASH  &kp CARET    &kp PIPE       &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans    &trans  &trans  &trans     &trans     &trans    &trans    &trans
+                                     &trans         &trans                &trans                 &trans    &trans  &trans  &trans     &trans
             >;
         };
 
