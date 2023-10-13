@@ -6,37 +6,39 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
 #define LOWER   1
 #define UPPER   2
-
 #define U_MOUSE_MOVE_MAX 1400                     /* <--- New max speed setting (default: 600) */
+
 #undef MOVE_UP
 #undef MOVE_DOWN
 #undef MOVE_LEFT
 #undef MOVE_RIGHT
+
 #define MOVE_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
 #define MOVE_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
 #define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
 #define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
-
 #define U_MOUSE_SCROLL_MAX 100                    /* <--- New max speed setting (default: 10) */
+
 #undef SCROLL_UP
 #undef SCROLL_DOWN
 #undef SCROLL_LEFT
 #undef SCROLL_RIGHT
+
 #define SCROLL_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
 #define SCROLL_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
 #define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
 #define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
 
 &mwh {
-  time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
+    time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
 };
 
 &mmv {
@@ -95,11 +97,21 @@
 
         mouse_layer {
             bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans     &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans  &trans    &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
-&trans  &trans    &trans    &trans     &trans     &trans  &trans    &trans  &trans  &mwh SCROLL_LEFT  &mwh SCROLL_DOWN  &mwh SCROLL_UP  &mwh SCROLL_RIGHT  &trans
-                            &trans     &trans     &trans  &trans    &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK
+&trans  &trans    &trans    &trans     &trans     &trans  &trans    &trans  &trans     &trans            &trans            &trans          &trans             &trans
+&trans  &trans    &trans    &trans     &trans     &trans  &trans    &trans  &trans     &trans            &trans            &trans          &trans             &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans  &trans    &trans  &trans     &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_UP    &mmv MOVE_RIGHT    &trans
+&trans  &trans    &trans    &trans     &trans     &trans  &trans    &trans  &trans     &mwh SCROLL_LEFT  &mwh SCROLL_DOWN  &mwh SCROLL_UP  &mwh SCROLL_RIGHT  &trans
+                            &trans     &trans     &trans  &trans    &trans  &mkp LCLK  &mkp MCLK         &mkp RCLK
+            >;
+        };
+
+        num_layer {
+            bindings = <
+&trans  &trans        &trans  &trans         &trans  &trans            &trans    &trans  &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp KP_MINUS  &kp N7  &kp N4         &kp N1  &kp KP_ASTERISK   &trans    &trans  &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp KP_PLUS   &kp N8  &kp N5         &kp N2  &kp KP_EQUAL      &trans    &trans  &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
+&trans  &kp KP_COMMA  &kp N9  &kp N6         &kp N3  &kp KP_SLASH      &trans    &trans  &trans  &trans     &trans     &trans    &trans    &trans
+                              &kp LESS_THAN  &kp N0  &kp GREATER_THAN  &trans    &trans  &trans  &trans     &trans
             >;
         };
 
@@ -126,13 +138,13 @@
         combo_upperl {
             timeout-ms = <50>;
             key-positions = <56 57>;
-            bindings = <&mo 3>;
+            bindings = <&mo 4>;
         };
 
         combo_upperr {
             timeout-ms = <50>;
             key-positions = <62 63>;
-            bindings = <&mo 3>;
+            bindings = <&mo 4>;
         };
     };
 };
