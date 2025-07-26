@@ -124,12 +124,6 @@ ZMK_BEHAVIOR(win_sleep, macro,
         compatible = "zmk,keymap";
 
         default_layer {
-            // | `       | 1    | 2    | 3      | 4       | 5       | -          | =              | 6          | 7       | 8       | 9     | 0      | -       |
-            // | [       | Q    | W    | E      | R       | T       | //         | \\             | Y          | U       | I       | O     | P      | ]       |
-            // | (       | A    | S    | D      | F       | G       | ESC        | TAB            | H          | J       | K       | L     | ;      | )       |
-            // | LSHIFT  | Z    | X    | C      | V       | B       | DEL        | BSPC           | N          | M       | ,       | .     | '      | RSHIFT  |
-            // |         |      |      | LGUI   | FN      | LCTL    | LALT       | SPC / RCTL     | RET        | RCTL    | RALT    |       |        |         |
-
             bindings = <
 &trans           &trans        &trans       &trans            &trans          &trans         &trans              &trans      &trans       &trans             &trans        &trans      &trans       &trans
 &kp EQUAL        &kp Q         &kp W        &kp F             &kp P           &kp B          &trans              &trans      &kp J        &kp L              &kp U         &kp Y       &kp LBKT     &kp RBKT
@@ -140,12 +134,6 @@ ZMK_BEHAVIOR(win_sleep, macro,
         };
 
         nav_layer {
-            // |      | F1   | F2     | F3      | F4     | F5  |      |      | F6      | F7     | F8     | F9      | F10   | F11   |
-            // |      |      |        | PG UP   |        |     |      |      |         |        | ↑      |         |       | F12   |
-            // |      |      | HOME   | PG DOWN | END    |     |      |      |         | ←      | ↓      | →       |       |       |
-            // |      |      |        |         |        |     |      |      |         |        |        |         |       |       |
-            // |      |      |        |         |        |     |      |      | SPC     |        |        |         |       |       |
-
             bindings = <
 &trans  &kp F1    &kp F2    &kp F3     &kp F4     &kp F5  &trans    &trans     &kp F6         &kp F7      &kp F8     &kp F9     &kp F10    &kp F11
 &trans  &trans    &trans    &trans     &trans     &trans  &trans    &trans     &trans         &kp HOME    &kp PG_DN  &kp PG_UP  &kp END    &kp F12
